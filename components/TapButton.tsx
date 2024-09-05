@@ -36,7 +36,7 @@ export default function TapButton() {
     return (
         <div>
             <div
-                className="flex justify-center items-center relative overflow-hidden py-4 z-30 h-[500px] top-[-80px]"
+                className="flex justify-center items-center relative overflow-hidden py-4 z-30 h-[500px] top-[-80px] cursor-pointer"
                 onMouseDown={handleMouseDown}
                 onMouseMove={handleMouseMove}
                 onMouseUp={handleMouseUp}
@@ -49,14 +49,15 @@ export default function TapButton() {
                     height={500}
                     className="absolute min-w-[500px] min-h-[500px] z-20"
                 />
-                <Image
+                {/* <Image
                     src={`/img/usdt-gold-logo.png`}
                     alt=""
                     width={300}
                     height={300}
                     className="relative z-30"
                     ref={imageRef}
-                />
+                /> */}
+                <Image src={`/img/img1.jpg`} alt="" width={300} height={300} className="relative z-30" ref={imageRef} />
             </div>
         </div>
     );

@@ -8,21 +8,25 @@ export default function Score() {
                 <div className={`bg-[#F5F5F5] rounded-lg flex flex-col justify-center items-center w-full py-2 gap-2`}>
                     <p className="text-[#E6C451] text-[12px] font-bold">Profit per click</p>
                     <p className="text-black font-semibold text-[14px] flex items-center gap-1">
-                        <Image src={"/img/usdt-logo.png"} alt="" width={20} height={20} /> +0.000002
+                        {/* <Image src={"/img/usdt-logo.png"} alt="" width={20} height={20} /> +0.000002 */}
+                        <Image src={"/img/img1.jpg"} alt="" width={20} height={20} /> +0.000002
                     </p>
                     <p className="text-black font-semibold text-[14px] flex items-center gap-1">
-                        <Image src={"/img/usdt-gold.png"} alt="" width={20} height={20} />
+                        {/* <Image src={"/img/usdt-gold.png"} alt="" width={20} height={20} /> */}
+                        <Image src={"/img/img1.jpg"} alt="" width={20} height={20} />
                         +0.000037
                     </p>
                 </div>
                 <div className={`bg-[#F5F5F5] rounded-lg flex flex-col justify-center items-center w-full py-2 gap-2`}>
                     <p className="text-[#E6C451] text-[12px] font-bold">Profit per hour</p>
                     <p className="text-black font-semibold text-[14px] flex items-center gap-1">
-                        <Image src={"/img/usdt-logo.png"} alt="" width={20} height={20} />
+                        {/* <Image src={"/img/usdt-logo.png"} alt="" width={20} height={20} /> */}
+                        <Image src={"/img/img1.jpg"} alt="" width={20} height={20} />
                         +0
                     </p>
                     <p className="text-black font-semibold text-[14px] flex items-center gap-1">
-                        <Image src={"/img/usdt-gold.png"} alt="" width={20} height={20} />
+                        {/* <Image src={"/img/usdt-gold.png"} alt="" width={20} height={20} /> */}
+                        <Image src={"/img/img1.jpg"} alt="" width={20} height={20} />
                         +0
                     </p>
                 </div>
@@ -30,12 +34,14 @@ export default function Score() {
             <div className="flex flex-col items-center mt-4 justify-center gap-2 relative">
                 <p className="text-[32px] font-bold text-black flex items-center gap-2">
                     {" "}
-                    <Image src={"/img/usdt-logo.png"} alt="" width={50} height={50} />
+                    {/* <Image src={"/img/usdt-logo.png"} alt="" width={50} height={50} /> */}
+                    <Image src={"/img/img1.jpg"} alt="" width={50} height={50} />
                     0.005606
                 </p>
                 <p className="text-[24px] font-semibold text-black flex items-center gap-2">
                     {" "}
-                    <Image src={"/img/usdt-gold.png"} alt="" width={30} height={30} />
+                    {/* <Image src={"/img/usdt-gold.png"} alt="" width={30} height={30} /> */}
+                    <Image src={"/img/img1.jpg"} alt="" width={30} height={30} />
                     0.103711
                 </p>
             </div>

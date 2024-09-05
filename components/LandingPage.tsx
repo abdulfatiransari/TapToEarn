@@ -2,6 +2,7 @@ import React from "react";
 import Score from "./Score";
 import { IoPersonOutline } from "react-icons/io5";
 import TapButton from "./TapButton";
+import { TonConnectButton } from "@tonconnect/ui-react";
 
 export default function LandingPage() {
     return (
@@ -17,6 +18,7 @@ export default function LandingPage() {
                             Deposit / Withdraw
                         </button>
                     </div>
+                    <TonConnectButton />
                 </div>
                 <Score />
                 <TapButton />
