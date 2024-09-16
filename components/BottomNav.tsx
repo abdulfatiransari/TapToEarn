@@ -31,23 +31,22 @@ export default function BottomNav() {
         },
     ];
     return (
-        <div className="flex justify-center relative w-full">
+        <div className="flex justify-center relative w-full z-40">
             <div className="fixed bottom-0 w-full px-2">
                 {active === "Home" && (
                     <div className="flex items-center justify-start gap-2 mb-4">
                         <MdOutlineElectricBolt color="#259F7B" size={20} />
-                        <p className={`text-black`}>1000</p>
-                        <p className={`text-black`}>/</p>
-                        <p className={`text-black`}>1000</p>
+                        <p className={`text--[#1A1F24] text-white`}>1000</p>
+                        <p className={`text--[#1A1F24] text-white`}>/</p>
+                        <p className={`text--[#1A1F24] text-white`}>1000</p>
                     </div>
                 )}
-                <div className="flex justify-between items-center gap-1 bg-[#EEF5F3] p-2 rounded-lg mx-2 w-[95vw]">
+                <div className="flex justify-between items-center gap-1 bg-[#1a1f246c] p-2 rounded-lg sm:w-full">
                     {tabs.map((item, idx) => (
                         <div
                             key={idx}
-                            className={`${
-                                active === item?.title ? "bg-[#259F7B] text-[#FFFFFF]" : "bg-white text-[#C2C7C5]"
-                            } rounded-lg flex flex-col items-center px-4 py-2 cursor-pointer text-sm  hover:bg-[#259F7B] hover:text-white w-full`}
+                            className={`${active === item?.title ? "bg-[#ffffff76] text-[#FFFFFF]" : "bg-[#ffffff35] text-[#C2C7C5]"
+                                } rounded-lg flex flex-col items-center px-4 py-2 cursor-pointer text-sm  hover:bg-[#ffffff76] hover:text-white w-full`}
                             onClick={() => setActive(item.title)}
                         >
                             {item.img}

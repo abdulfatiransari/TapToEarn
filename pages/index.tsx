@@ -18,7 +18,7 @@ interface ActiveContextType {
 export default function Home() {
     const { active } = useContext<ActiveContextType>(Context);
     return (
-        <div className="bg-white flex flex-col h-screen pt-16">
+        <div className="bg-white flex flex-col h-screen ">
             {active === "Home" ? (
                 <LandingPage />
             ) : active === "Mine" ? (

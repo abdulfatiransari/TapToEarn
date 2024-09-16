@@ -31,23 +31,23 @@ export default function InviteFriend() {
                 </div>
             )}
             <div>
-                <p className="text-black text-2xl font-bold">Invite friends!</p>
+                <p className="text-white text-2xl font-bold">Invite friends!</p>
                 <p className="text-gray-400 text-xs">You will also earn 10% of the referral's income.</p>
                 <div className="flex justify-between items-center mt-4">
-                    <p className="text-black text-sm font-semibold">List of your friends (0)</p>
+                    <p className="text-white text-sm font-semibold">List of your friends (0)</p>
                     <TfiReload size={15} color="black" className="cursor-pointer" />
                 </div>
-                <div className="flex flex-col justify-center items-center rounded-lg bg-[#EEF5F3] gap-1 py-4 mt-4">
-                    <p className="text-black text-2xl font-bold">0 friends!</p>
+                <div className="flex flex-col justify-center items-center rounded-lg bg-[#ffffff35] gap-1 py-4 mt-4">
+                    <p className="text-white text-2xl font-bold">0 friends!</p>
                     <p className="text-gray-400 text-xs">You and your friend will receive bonuses</p>
                 </div>
             </div>
             <div className="flex gap-2 mb-20">
-                <button className="bg-[#259F7B] text-white rounded-lg w-full flex items-center justify-center py-2 gap-2 font-semibold">
+                <button className="bg-[#341355] shadow-xl text-white rounded-lg w-full flex items-center justify-center py-2 gap-2 font-semibold">
                     <AiOutlinePlus size={24} />
                     Invite a friend
                 </button>
-                <button className="bg-[#259F7B] text-white rounded-lg p-2" onClick={() => copyToClipboard()}>
+                <button className="bg-[#341355] shadow-xl text-white rounded-lg p-2" onClick={() => copyToClipboard()}>
                     <IoCopyOutline size={24} />
                 </button>
             </div>

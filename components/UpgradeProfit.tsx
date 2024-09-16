@@ -228,14 +228,13 @@ export default function UpgradeProfit() {
 
     return (
         <div className="pb-[100px]">
-            <p className="text-black text-sm font-semibold mt-4">Upgrade Profit</p>
-            <div className="flex justify-between bg-[#EEF5F3] rounded-lg p-2 mt-4">
+            <p className="text-sm font-semibold mt-4 text-white">Upgrade Profit</p>
+            <div className="flex justify-between bg-[#ffffff35] rounded-lg p-2 mt-4">
                 {tabs.map((item, idx) => (
                     <div key={idx} className="cursor-pointer" onClick={() => setTabActive(item?.title)}>
                         <p
-                            className={`${
-                                tabActive === item?.title ? "bg-[#259F7B] text-[#FFFFFF]" : " text-[#C2C7C5]"
-                            } px-4 py-1 rounded-lg font-bold text-sm`}
+                            className={`${tabActive === item?.title ? "bg-[#341355] text-[#FFFFFF]" : " text-[#C2C7C5]"
+                                } px-4 py-1 rounded-lg font-bold text-sm`}
                         >
                             {item?.title}
                         </p>
@@ -247,36 +246,36 @@ export default function UpgradeProfit() {
                     {(tabActive === "Flippers"
                         ? flippersData
                         : tabActive === "Degens"
-                        ? degensData
-                        : tabActive === "Holders"
-                        ? holdersData
-                        : whalesData
+                            ? degensData
+                            : tabActive === "Holders"
+                                ? holdersData
+                                : whalesData
                     ).map((item, idx) => (
                         <div
                             key={idx}
-                            className="flex justify-between items-center bg-[#EEF5F3] p-2 rounded-lg"
+                            className="flex justify-between items-center bg-[#ffffff35] p-2 rounded-lg"
                             onClick={() => setOpen(true)}
                         >
                             <div className="flex items-center gap-4">
-                                <div className="bg-white p-2 rounded-lg">
+                                <div className="bg-[#ffffff35] p-2 rounded-lg">
                                     <Image src={"/img/usdt-logo.png"} alt="" width={20} height={20} />
                                 </div>
                                 <div>
-                                    <p className="text-black font-semibold text-sm">{item?.title}</p>
+                                    <p className="text-white font-semibold text-sm">{item?.title}</p>
 
-                                    <p className="text-black flex items-center gap-1 text-xs">
+                                    <p className="text-white flex items-center gap-1 text-xs">
                                         Profit <Image src={"/img/usdt-logo.png"} alt="" width={15} height={15} />
                                         {item?.profit}
                                     </p>
 
-                                    <p className="text-black flex items-center gap-1 text-xs">
+                                    <p className="text-white flex items-center gap-1 text-xs">
                                         Profit <Image src={"/img/usdt-gold.png"} alt="" width={15} height={15} />
                                         {item?.profitPoints}
                                     </p>
                                 </div>
                             </div>
                             <div>
-                                <button className="flex gap-1 items-center text-black text-xs border border-[#259F7B] py-1 px-4 rounded-lg">
+                                <button className="flex gap-1 items-center text-white text-xs border  py-1 px-4 rounded-lg">
                                     Buy - {item?.value}{" "}
                                     <Image src={"/img/usdt-logo.png"} alt="" width={15} height={15} />
                                 </button>
@@ -302,7 +301,7 @@ export default function UpgradeProfit() {
                                         height={50}
                                         className="bg-white p-2 rounded-lg"
                                     />
-                                    <p className="text-black text-2xl font-bold">Airdroplandia</p>
+                                    <p className="text-white text-2xl font-bold">Airdroplandia</p>
                                     <p className="text-gray-400 text-sm">
                                         A generous upgrade for all crypto enthusiasts!
                                     </p>
@@ -311,11 +310,11 @@ export default function UpgradeProfit() {
                                 <div className="flex flex-col gsp-4 mt-4">
                                     <div className="flex justify-between items-center">
                                         <p className="text-sm text-gray-400">Upgrade period:</p>
-                                        <p className="text-black">10 days</p>
+                                        <p className="text-white">10 days</p>
                                     </div>
                                     <div className="flex justify-between items-center">
                                         <p className="text-sm text-gray-400">Max profit</p>
-                                        <p className="text-black text-sm flex items-center gap-1">
+                                        <p className="text-white text-sm flex items-center gap-1">
                                             <Image src={"/img/usdt-logo.png"} alt="" width={15} height={15} />
                                             10 days / <Image src={"/img/usdt-gold.png"} alt="" width={15} height={15} />
                                             10 days
@@ -323,7 +322,7 @@ export default function UpgradeProfit() {
                                     </div>
                                     <div className="flex justify-between items-center">
                                         <p className="text-sm text-gray-400">Profit per hour</p>
-                                        <p className="text-black text-sm flex items-center gap-1">
+                                        <p className="text-white text-sm flex items-center gap-1">
                                             + <Image src={"/img/usdt-logo.png"} alt="" width={15} height={15} />
                                             10 days / <Image src={"/img/usdt-gold.png"} alt="" width={15} height={15} />
                                             10 days
@@ -331,7 +330,7 @@ export default function UpgradeProfit() {
                                     </div>
                                     <div className="flex justify-between items-center">
                                         <p className="text-sm text-gray-400">Profit per click</p>
-                                        <p className="text-black text-sm flex items-center gap-1">
+                                        <p className="text-white text-sm flex items-center gap-1">
                                             + <Image src={"/img/usdt-logo.png"} alt="" width={15} height={15} />
                                             10 days / <Image src={"/img/usdt-gold.png"} alt="" width={15} height={15} />
                                             10 days

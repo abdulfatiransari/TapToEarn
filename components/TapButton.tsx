@@ -1,64 +1,48 @@
 import Image from "next/image";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
+import Tilt from 'react-parallax-tilt';
 
 export default function TapButton() {
-    const [mousePosition, setMousePosition] = useState({ x: null, y: null });
+    const [isTall, setIsTall] = useState(false);
+    const [isVisible, setIsVisible] = useState(false);
 
-    const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
-    console.log("🚀 ~ TapButton ~ cursorPosition:", cursorPosition);
-    const [isMouseDown, setIsMouseDown] = useState(false);
-    const ref = useRef<any>(null);
-    const imageRef = useRef(null);
-
-    useEffect(() => {
-        const handleClick = (event: any) => {
-            setCursorPosition({ x: event.clientX, y: event.clientY });
-        };
-
-        ref.current.addEventListener("click", handleClick);
-        return () => ref?.current?.removeEventListener("click", handleClick);
-    }, []);
-    const handleMouseDown = (event: any) => {
-        setIsMouseDown(true);
-        setCursorPosition({ x: event.clientX, y: event.clientY });
-    };
-
-    const handleMouseMove = (event: any) => {
-        if (isMouseDown) {
-            setCursorPosition({ x: event.clientX, y: event.clientY });
-        }
-    };
-
-    const handleMouseUp = () => {
-        setIsMouseDown(false);
+    const handleClick = () => {
+        setIsTall(!isTall);
+        setIsVisible(true);
+        setTimeout(() => {
+            setIsTall(false);
+        }, 100);
+        // Hide the element after a delay to let the animation play
+        setTimeout(() => {
+            setIsVisible(false);
+        }, 500); // Adjust the timeout duration to match the duration of your animation
     };
 
     return (
-        <div>
-            <div
-                className="flex justify-center items-center relative overflow-hidden py-4 z-30 h-[500px] top-[-80px] cursor-pointer"
-                onMouseDown={handleMouseDown}
-                onMouseMove={handleMouseMove}
-                onMouseUp={handleMouseUp}
-                ref={ref}
+        <div className="relative bg-image flex justify-center items-center overflow-hidden py-4 z-30 h-[500px] top-[-80px] cursor-pointer">
+            <Tilt
+
+                perspective={1000}
+                tiltMaxAngleX={10}
+                tiltMaxAngleY={10}
+                tiltReverse={false}
             >
-                <Image
-                    src={`/img/token-ring.png`}
-                    alt=""
-                    width={500}
-                    height={500}
-                    className="absolute min-w-[500px] min-h-[500px] z-20"
-                />
-                {/* <Image
-                    src={`/img/usdt-gold-logo.png`}
-                    alt=""
-                    width={300}
-                    height={300}
-                    className="relative z-30"
-                    ref={imageRef}
-                /> */}
-                <Image src={`/img/img1.jpg`} alt="" width={300} height={300} className="relative z-30" ref={imageRef} />
-            </div>
+                <div onClick={handleClick} className={`relative z-30 transition-transform duration-300 ${isTall ? 'scale-105' : 'scale-100'}`}>
+                    <Image
+                        src={`/img/bull.png`}
+                        alt=""
+                        width={300}
+                        height={300}
+                    />
+                </div>
+            </Tilt>
+
+            <span
+                className={`absolute text-gray-200 text-xl bottom-80 left-1/2 transform -translate-x-10/12 transition-transform duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
+                style={{ zIndex: 40 }} // Ensure it's above other content
+            >
+                4+
+            </span>
         </div>
     );
 }

@@ -52,36 +52,37 @@ export default function FAQPage() {
         },
     ];
     return (
-        <div className="bg-[#259F7B] pt-[5px] rounded-t-[36px]">
+        <div className="bg-[#341355] pt-[5px] rounded-t-[36px] h-full">
             <div className="px-4 py-6 relative">
                 <p className="text-white text-2xl font-bold">FAQ</p>
                 <p className="text-xs text-white">Find answers to frequently asked questions</p>
-                <Image src={"/img/faq.svg"} alt="" width={150} height={150} className="absolute top-[-60px] right-1" />
+                {/* <Image src={"/img/faq.svg"} alt="" width={150} height={150} className="absolute top-[-60px] right-1" /> */}
             </div>
-            <div className="bg-white rounded-t-[36px] pt-6 px-2 flex flex-col gap-4 pb-[100px]">
+            <div style={{
+                background: "radial-gradient(circle, rgba(90, 0, 150, 0.8) 40%, rgba(0, 0, 0, 1) 100%)",
+            }} className=" rounded-t-[36px] pt-6 px-2 flex flex-col gap-4 pb-[100px]">
                 <div className="px-2 flex gap-2 flex-col">
                     {faqData.map((item, idx) => (
                         <div
-                            className="bg-[#EEF5F3] rounded-lg px-4 py-4 flex flex-col gap-2"
+                            className="bg-[#ffffff35] rounded-lg px-4 py-4 flex flex-col gap-2"
                             key={idx}
                             onClick={() => handleToggle(idx)}
                         >
                             <div className="flex justify-between items-center">
-                                <p className="text-black text-xs font-semibold">{item?.title}</p>
+                                <p className="text-white text-xs font-semibold">{item?.title}</p>
                                 <p className="border border-gray-300 rounded-lg p-1">
                                     <IoIosArrowDown
                                         size={15}
-                                        className={`text-gray-400 ${
-                                            open === idx
-                                                ? "open rotate-180 transition duration-300 ease-out"
-                                                : "transition duration-300 ease-out"
-                                        }`}
+                                        className={`text-gray-300 ${open === idx
+                                            ? "open rotate-180 transition duration-300 ease-out"
+                                            : "transition duration-300 ease-out"
+                                            }`}
                                     />
                                 </p>
                             </div>
                             {open === idx && (
                                 <div>
-                                    <p className="text-gray-500 text-xs">{item?.des}</p>
+                                    <p className="text-gray-200 text-xs">{item?.des}</p>
                                 </div>
                             )}
                         </div>
