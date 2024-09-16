@@ -22,7 +22,7 @@ export default function InviteFriend() {
         }
     };
     return (
-        <div className="flex flex-col justify-between h-full gap-4 pt-4">
+        <div className="flex flex-col justify-between min-h-screen gap-4 pt-4">
             {copied && (
                 <div className="absolute top-2 left-[40%]">
                     <p className="bg-[#259F7B] text-white flex items-center justify-center rounded-lg p-2 w-fit gap-2">
