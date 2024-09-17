@@ -12,10 +12,9 @@ export default function TapButton() {
         setTimeout(() => {
             setIsTall(false);
         }, 100);
-        // Hide the element after a delay to let the animation play
         setTimeout(() => {
             setIsVisible(false);
-        }, 500); // Adjust the timeout duration to match the duration of your animation
+        }, 500);
     };
 
     return (
