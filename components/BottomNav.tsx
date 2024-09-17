@@ -25,10 +25,10 @@ export default function BottomNav() {
             img: <AiOutlineUsergroupAdd size={23} />,
             title: "Referrals",
         },
-        {
-            img: <TbMessage2 size={23} />,
-            title: "FAQ",
-        },
+        // {
+        //     img: <TbMessage2 size={23} />,
+        //     title: "FAQ",
+        // },
     ];
     return (
         <div className="flex justify-center relative w-full z-40">

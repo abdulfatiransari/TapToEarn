@@ -26,7 +26,8 @@ export default function Home() {
             ) : active === "Referrals" ? (
                 <ReferralPage />
             ) : (
-                <FAQPage />
+                <></>
+                // <FAQPage />
             )}
             <BottomNav />
         </div>
