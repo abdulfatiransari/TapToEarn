@@ -10,13 +10,13 @@ export default function UpgradeProfit() {
 
     return (
         <div className="pb-[100px]">
-            <p className="text-sm font-semibold mt-4 text-white">Upgrade Profit</p>
-            <div className="flex justify-between bg-[#ffffff35] rounded-lg p-2 mt-4">
+            <p className="text-xs sm:text-lg font-semibold mt-4 text-white">Upgrade Profit</p>
+            <div className="flex justify-between bg-[#ffffff35] rounded-lg py-2 px-1 mt-4">
                 {tabs.map((item, idx) => (
                     <div key={idx} className="cursor-pointer" onClick={() => setTabActive(item?.title)}>
                         <p
                             className={`${tabActive === item?.title ? "bg-[#341355] text-[#FFFFFF]" : " text-[#C2C7C5]"
-                                } px-4 py-1 rounded-lg font-bold text-sm`}
+                                } px-[0.4rem] py-1 rounded-lg font-bold text-xs sm:text-lg`}
                         >
                             {item?.title}
                         </p>
@@ -24,7 +24,7 @@ export default function UpgradeProfit() {
                 ))}
             </div>
             <div className="flex justify-center items-center  h-full">
-                <h1 className="text-white text-[50px] shadow-lg text-center my-10"
+                <h1 className="text-white text-[30px] sm:text-[50px] shadow-lg text-center my-10"
                     style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)" }}>
                     Coming Soon
                 </h1>                {/* <div className=" flex flex-col gap-1 mt-4">

@@ -18,7 +18,11 @@ interface ActiveContextType {
 export default function Home() {
     const { active } = useContext<ActiveContextType>(Context);
     return (
-        <div className="bg-white flex flex-col min-h-min ">
+        <div
+            style={{
+                background: "radial-gradient(circle, rgba(90, 0, 150, 0.8) 40%, rgba(0, 0, 0, 1) 100%)",
+                height: '100vh',
+            }}>
             {active === "Home" ? (
                 <LandingPage />
             ) : active === "Mine" ? (

@@ -31,24 +31,24 @@ export default function InviteFriend() {
                 </div>
             )}
             <div>
-                <p className="text-white text-2xl font-bold">Invite friends!</p>
-                <p className="text-gray-400 text-xs">You will also earn 10% of the referral's income.</p>
+                <p className="text-white text-xl sm:text-2xl font-bold">Invite friends!</p>
+                <p className="text-gray-400 text-xs sm:text-sm">You will also earn 10% of the referral's income.</p>
                 <div className="flex justify-between items-center mt-4">
-                    <p className="text-white text-sm font-semibold">List of your friends (0)</p>
-                    <TfiReload size={15} color="black" className="cursor-pointer" />
+                    <p className="text-white text-xs sm:text-sm font-semibold">List of your friends (0)</p>
+                    <TfiReload size={15} color="white" className="cursor-pointer" />
                 </div>
-                <div className="flex flex-col justify-center items-center rounded-lg bg-[#ffffff35] gap-1 py-4 mt-4">
-                    <p className="text-white text-2xl font-bold">0 friends!</p>
-                    <p className="text-gray-400 text-xs">You and your friend will receive bonuses</p>
+                <div className="flex flex-col justify-center items-center rounded-lg bg-[#ffffff35] gap-1 py-2 sm:py-4 mt-4">
+                    <p className="text-white text-xl sm:text-2xl font-bold">0 friends!</p>
+                    <p className="text-gray-400 text-xs sm:text-sm">You and your friend will receive bonuses</p>
                 </div>
             </div>
             <div className="flex gap-2 mb-20">
-                <button className="bg-[#341355] shadow-xl text-white rounded-lg w-full flex items-center justify-center py-2 gap-2 font-semibold">
-                    <AiOutlinePlus size={24} />
+                <button className="bg-[#341355] shadow-xl text-xs sm:text-lg text-white rounded-lg w-full flex items-center justify-center py-1 sm:py-2 gap-2 font-semibold">
+                    <AiOutlinePlus size={18} />
                     Invite a friend
                 </button>
                 <button className="bg-[#341355] shadow-xl text-white rounded-lg p-2" onClick={() => copyToClipboard()}>
-                    <IoCopyOutline size={24} />
+                    <IoCopyOutline size={18} />
                 </button>
             </div>
         </div>

@@ -14,19 +14,19 @@ export default function BottomNav() {
     console.log("🚀 ~ BottomNav ~ active:", active);
     const tabs = [
         {
-            img: <IoHomeOutline size={23} />,
+            img: <IoHomeOutline size={18} />,
             title: "Home",
         },
         {
-            img: <TbTools size={23} />,
+            img: <TbTools size={18} />,
             title: "Mine",
         },
         {
-            img: <AiOutlineUsergroupAdd size={23} />,
+            img: <AiOutlineUsergroupAdd size={18} />,
             title: "Referrals",
         },
         // {
-        //     img: <TbMessage2 size={23} />,
+        //     img: <TbMessage2 size={18} />,
         //     title: "FAQ",
         // },
     ];
@@ -46,7 +46,7 @@ export default function BottomNav() {
                         <div
                             key={idx}
                             className={`${active === item?.title ? "bg-[#ffffff76] text-[#FFFFFF]" : "bg-[#ffffff35] text-[#C2C7C5]"
-                                } rounded-lg flex flex-col items-center px-4 py-2 cursor-pointer text-sm  hover:bg-[#ffffff76] hover:text-white w-full`}
+                                } rounded-lg flex flex-row sm:flex-col justify-center items-center px-2 py-1 sm:py-2 cursor-pointer text-xs sm:text-lg  hover:bg-[#ffffff76] hover:text-white w-full`}
                             onClick={() => setActive(item.title)}
                         >
                             {item.img}

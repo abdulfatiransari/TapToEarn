@@ -12,9 +12,10 @@ export default function TapButton() {
         setTimeout(() => {
             setIsTall(false);
         }, 100);
+        // Hide the element after a delay to let the animation play
         setTimeout(() => {
             setIsVisible(false);
-        }, 500);
+        }, 500); // Adjust the timeout duration to match the duration of your animation
     };
 
     return (
@@ -26,12 +27,12 @@ export default function TapButton() {
                 tiltMaxAngleY={10}
                 tiltReverse={false}
             >
-                <div onClick={handleClick} className={`relative z-30 transition-transform duration-300 ${isTall ? 'scale-105' : 'scale-100'}`}>
+                <div onClick={handleClick} className={`relative z-30 top-[-60px] sm:top-0  transition-transform duration-300 ${isTall ? 'scale-105' : 'scale-100'}`}>
                     <Image
                         src={`/img/bull.png`}
                         alt=""
-                        width={300}
-                        height={300}
+                        width={200}
+                        height={200}
                         style={{
                             filter: 'drop-shadow(0px 50px 30px rgba(0, 0, 0, 0.3))'
                         }}
