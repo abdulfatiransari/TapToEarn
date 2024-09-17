@@ -3,7 +3,7 @@ import RewardBoxContainer from '@/components/RewardBoxContainer'
 import React from 'react'
 import { BiArrowFromRight, BiArrowToBottom, BiBitcoin, BiCoin, BiDotsHorizontal, BiDotsVertical, BiLeftArrow, BiRightArrow } from 'react-icons/bi'
 
-const booms = () => {
+const Reward = () => {
     return (
         <div style={{
             background: "radial-gradient(circle, rgba(90, 0, 150, 0.8) 40%, rgba(0, 0, 0, 1) 100%)",
@@ -12,7 +12,7 @@ const booms = () => {
             <div className='flex justify-between items-center text-white gap-x-2'>
                 <BiArrowFromRight size={18} />
                 <div className='flex justify-start items-center w-full'>
-                    <p className='text-left uppercase font-semibold text-sm sm:text-lg text-white'>Booms</p>
+                    <p className='text-left uppercase font-semibold text-sm sm:text-lg text-white'>Reward</p>
                 </div>
                 <div className='flex gap-x-2'>
 
@@ -27,7 +27,7 @@ const booms = () => {
                 </div>
                 <div>
                     <span className='text-xs sm:text-lg'>
-                        1K $BOOMS = 10USDT
+                        1K $Reward = 10USDT
                     </span>
                 </div>
                 <div className='flex gap-x-1 justify-center items-center'>
@@ -54,4 +54,4 @@ const booms = () => {
     )
 }
 
-export default booms
+export default Reward

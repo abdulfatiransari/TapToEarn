@@ -7,6 +7,7 @@ import LandingPage from "@/components/LandingPage";
 import MinePage from "@/components/MinePage";
 import ReferralPage from "@/components/ReferralPage";
 import FAQPage from "@/components/FAQPage";
+import Reward from "./booms";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -30,8 +31,8 @@ export default function Home() {
             ) : active === "Referrals" ? (
                 <ReferralPage />
             ) : (
-                <></>
                 // <FAQPage />
+                <Reward />
             )}
             <BottomNav />
         </div>

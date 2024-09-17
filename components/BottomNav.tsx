@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { AiOutlineUsergroupAdd } from "react-icons/ai";
 import { IoHomeOutline } from "react-icons/io5";
-import { TbMessage2, TbTools } from "react-icons/tb";
+import { TbMessage2, TbRewindForward10, TbTools } from "react-icons/tb";
 import { Context } from "./Context";
 import { MdOutlineElectricBolt } from "react-icons/md";
 
@@ -25,10 +25,10 @@ export default function BottomNav() {
             img: <AiOutlineUsergroupAdd size={18} />,
             title: "Referrals",
         },
-        // {
-        //     img: <TbMessage2 size={18} />,
-        //     title: "FAQ",
-        // },
+        {
+            img: <TbRewindForward10 size={18} />,
+            title: "Reward",
+        },
     ];
     return (
         <div className="flex justify-center relative w-full z-40">
@@ -46,7 +46,7 @@ export default function BottomNav() {
                         <div
                             key={idx}
                             className={`${active === item?.title ? "bg-[#ffffff76] text-[#FFFFFF]" : "bg-[#ffffff35] text-[#C2C7C5]"
-                                } rounded-lg flex flex-row sm:flex-col justify-center items-center px-2 py-1 sm:py-2 cursor-pointer text-xs sm:text-lg  hover:bg-[#ffffff76] hover:text-white w-full`}
+                                } rounded-lg flex flex-row sm:flex-col justify-center items-center gap-x-1 px-1 py-1 sm:py-2 cursor-pointer text-xs sm:text-lg  hover:bg-[#ffffff76] hover:text-white w-full`}
                             onClick={() => setActive(item.title)}
                         >
                             {item.img}
