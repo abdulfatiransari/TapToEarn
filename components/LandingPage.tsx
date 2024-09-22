@@ -22,7 +22,7 @@ export default function LandingPage() {
                 </div>
                 <TonConnectButton />
             </div>
-            {/* <Score /> */}
+            <Score />
             <TapButton />
         </div>
     );
