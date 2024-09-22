@@ -3,9 +3,16 @@ import React, { useState } from "react";
 import BottomModal from "./BottomModal";
 import { RxCross2 } from "react-icons/rx";
 import { degensData, flippersData, holdersData, Speclals, tabs, whalesData } from "@/constant/MinTab";
+import PrTeam from "./Mine/PrTeam";
+import { prTeamData } from "@/constant/MineData/PrTeam";
+import { Web3Data } from "@/constant/MineData/Web3";
+import { MarketData } from "@/constant/MineData/Markets";
+import { LegalData } from "@/constant/MineData/Legal";
+import SpeclalsSection from "./Mine/specials";
+import { SpecialData } from "@/constant/MineData/Specials";
 
 export default function UpgradeProfit() {
-    const [tabActive, setTabActive] = useState<string>("Flippers");
+    const [tabActive, setTabActive] = useState<string>("PR&Team");
     const [isOpen, setOpen] = useState<boolean>(false);
 
     return (
@@ -23,11 +30,84 @@ export default function UpgradeProfit() {
                     </div>
                 ))}
             </div>
-            <div className="flex justify-center items-center  h-full">
-                <h1 className="text-white text-[30px] sm:text-[50px] shadow-lg text-center my-10"
-                    style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)" }}>
-                    Coming Soon
-                </h1>                {/* <div className=" flex flex-col gap-1 mt-4">
+            <div className="grid grid-cols-2 gap-5 xs:grid-cols-3 sm:grid-cols-4 h-full py-4">
+                {tabActive == "PR&Team" &&
+                    <>
+                        {
+                            prTeamData?.map((item: any, key: any) => {
+                                const { img, ppr, lvl, dollar, pprDollar, title } = item;
+                                return (
+                                    <div key={key}>
+                                        <PrTeam img={img} ppr={ppr} lvl={lvl} dollar={dollar} pprDollar={pprDollar} title={title} />
+                                    </div>
+
+                                )
+                            })
+                        }
+                    </>
+                }
+                {tabActive == "Markets" &&
+                    <>
+                        {
+                            MarketData?.map((item: any, key: any) => {
+                                const { img, ppr, lvl, dollar, pprDollar, title } = item;
+                                return (
+                                    <div key={key}>
+                                        <PrTeam img={img} ppr={ppr} lvl={lvl} dollar={dollar} pprDollar={pprDollar} title={title} />
+                                    </div >
+
+                                )
+                            })
+                        }
+                    </>
+                }
+                {tabActive == "Legal" &&
+                    <>
+                        {
+                            LegalData?.map((item: any, key: any) => {
+                                const { img, ppr, lvl, dollar, pprDollar, title } = item;
+                                return (
+                                    <div key={key}>
+                                        <PrTeam img={img} ppr={ppr} lvl={lvl} dollar={dollar} pprDollar={pprDollar} title={title} />
+                                    </div>
+
+                                )
+                            })
+                        }
+                    </>
+                }
+                {tabActive == "Web3" &&
+                    <>
+                        {
+                            Web3Data?.map((item: any, key: any) => {
+                                const { img, ppr, lvl, dollar, pprDollar, title } = item;
+                                return (
+                                    <div key={key}>
+                                        <PrTeam img={img} ppr={ppr} lvl={lvl} dollar={dollar} pprDollar={pprDollar} title={title} />
+                                    </div>
+
+                                )
+                            })
+                        }
+                    </>
+                }
+                {tabActive == "Speclals" &&
+                    <>
+                        {
+                            SpecialData?.map((item: any, key: any) => {
+                                const { img, ppr, lvl, dollar, pprDollar, title, tokenLaunch } = item;
+                                return (
+                                    <div key={key}>
+                                        <SpeclalsSection img={img} ppr={ppr} lvl={lvl} dollar={dollar} pprDollar={pprDollar} title={title} tokenLaunch={tokenLaunch} />
+                                    </div>
+
+                                )
+                            })
+                        }
+                    </>
+                }
+
+                {/* <div className=" flex flex-col gap-1 mt-4">
                     {(tabActive === "PR&Team"
                         ? flippersData
                         : tabActive === "Markets"

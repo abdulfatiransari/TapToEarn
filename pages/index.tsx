@@ -20,9 +20,11 @@ export default function Home() {
     const { active } = useContext<ActiveContextType>(Context);
     return (
         <div
+            className="min-h-screen"
             style={{
                 background: "radial-gradient(circle, rgba(90, 0, 150, 0.8) 40%, rgba(0, 0, 0, 1) 100%)",
-                height: '100vh',
+                // height: '99vh',
+
             }}>
             {active === "Home" ? (
                 <LandingPage />
