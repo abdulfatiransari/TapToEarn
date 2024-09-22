@@ -30,7 +30,7 @@ export default function UpgradeProfit() {
                     </div>
                 ))}
             </div>
-            <div className="grid grid-cols-2 gap-5 xs:grid-cols-3 sm:grid-cols-4 h-full py-4">
+            <div className="grid grid-cols-2 sm:gap-5 gap-2 xs:grid-cols-3 sm:grid-cols-4 h-full py-4">
                 {tabActive == "PR&Team" &&
                     <>
                         {
