@@ -12,7 +12,7 @@ interface PrTeamProps {
 const PrTeam: React.FC<PrTeamProps> = ({ img, ppr, lvl, dollar, pprDollar, title }) => {
     return (
         <div className=' rounded-2xl shadow-xl bg-[#ffffff35] text-white'>
-            <div className='flex justify-center gap-x-4 items-center  p-2'>
+            <div className='flex justify-center gap-x-2 sm:gap-x-4 items-center  sm:p-2 p-1'>
                 <div>
                     <Image src={`/img/${img}`} alt="" width={70} height={70} />
                 </div>
@@ -25,7 +25,7 @@ const PrTeam: React.FC<PrTeamProps> = ({ img, ppr, lvl, dollar, pprDollar, title
                 </div>
             </div>
             <div className='bg-white/5 w-full h-0.5' />
-            <div className='p-2 flex justify-center gap-x-4 items-center '>
+            <div className='sm:p-2 p-1 flex justify-center gap-x-2 sm:gap-x-4 items-center '>
                 <div>
                     <span>lvl{lvl}</span>
                 </div>
