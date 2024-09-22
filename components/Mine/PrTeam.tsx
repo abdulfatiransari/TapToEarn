@@ -17,7 +17,7 @@ const PrTeam: React.FC<PrTeamProps> = ({ img, ppr, lvl, dollar, pprDollar, title
                     <Image src={`/img/${img}`} alt="" width={70} height={70} />
                 </div>
                 <div>
-                    <span className='uppercase font-semibold text-xs sm:text-sm '>{title}</span>
+                    <span className='uppercase font-semibold text-xs[9px] sm:text-sm '>{title}</span>
                     <div className='flex flex-col'>
                         <span className='text-xs sm:text-sm capitalize '>{ppr}</span>
                         <span className='uppercase font-semibold text-xs sm:text-sm text-white '>{pprDollar}k</span>
